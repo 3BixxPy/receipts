@@ -1,5 +1,5 @@
-# receipts
-Email receipts from various brands like stockx, goat, bape,
+# Email receipts
+Email receipts from various brands
 
 # list of included brands
 - Apple
