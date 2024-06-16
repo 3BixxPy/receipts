@@ -1,0 +1,613 @@
+<html><head><style type="text/css">
+
+    h4
+    {
+        text-align: left;
+    }
+
+@media screen
+{
+
+	.headerLineTitle
+	{
+		width:1.5in;
+		display:inline-block;
+		margin:0in;
+		margin-bottom:.0001pt;
+		font-size:11.0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:bold;
+	}
+
+	.headerLineText
+	{
+		display:inline;
+		margin:0in;
+		margin-bottom:.0001pt;
+		font-size:11.0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:normal;
+	}
+
+   .pageHeader
+   {
+		font-size:14.0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:bold;
+		visibility:hidden;
+		display:none;
+   }
+}
+
+@media print
+{
+	.headerLineTitle
+	{
+		width:1.5in;
+		display:inline-block;
+		margin:0in;
+		margin-bottom:.0001pt;
+		font-size:11.0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:bold;
+	}
+
+	.headerLineText
+	{
+		display:inline;
+		margin:0in;
+		margin-bottom:.0001pt;
+		font-size:11.0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:normal;
+	}
+
+   .pageHeader
+   {
+		font-size:14.0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:bold;
+		visibility:visible;
+		display:block;
+   }
+
+}
+</style>
+<style>.ssBtnDefault{position:absolute;z-index:100000000;background:none;border:none;outline:none;right:0;cursor:pointer;width:26px;height:26px;margin:0;padding:0;top:8px;right:8px;opacity:.6;pointer-events:all;transition-duration:.25s}.ssBtnDefault:hover{opacity:1 !important;transition-duration:.25s}.ssBtnDefault .fade{transition-duration:5s;opacity:0}.ssBtnYouTube{background:none;border:none;margin-right:20px !important;padding-top:0px !important;width:25px !important}.ytp-embed .ssBtnYouTube{width:20px !important;margin-right:15px !important}.ssBtnVimeo{height:2rem !important;width:2rem !important;margin-top:8px !important}.ssBtnVimeo button{width:100% !important;height:100% !important}.ssBtnVimeo button svg{width:19px}.ssBtnNetflix{background:none;border:none;cursor:pointer;width:4rem;margin:0 .5rem;display:inline-block;flex-shrink:0}.ssBtnNetflix>svg{transform:translateY(-0.3rem)}.ssBtnNetflix:hover{transform:scale(1.2);transition-duration:.25s}.ssBtnHulu{width:27px;margin-top:4px;margin-right:10px;opacity:.7;cursor:pointer}.ssBtnHulu:hover{opacity:1}.ssBtnAmazon{margin-right:1.5vw;outline:none;cursor:pointer;opacity:.8}.ssBtnAmazon:hover{opacity:1}@media(min-width: 1200px){.ssBtnAmazon{width:1.6666666667vw;height:1.6666666667vw}}@media(max-width: 1199px){.ssBtnAmazon{width:20px;height:20px}}.ssBtnHBO{width:48px;height:48px;position:relative;opacity:.7;cursor:pointer;display:flex;justify-content:center;align-items:center}.ssBtnHBO:hover{opacity:1;transform:scale(1.2)}.ssBtnHBO svg{width:24px;height:24px}.ssBtnDisney{opacity:.7}.ssBtnDisney:hover{opacity:1}.ssBtnDisney svg{width:25px !important;height:31px !important;padding-top:4px;margin-right:7px}.ssBtnApple{cursor:pointer;opacity:.7}.ssBtnApple:hover{opacity:1}.ssBtnApple svg{width:22px !important;height:22px !important;margin-right:2px !important}body #ssTempHolder{position:fixed;z-index:1000000000000;width:100%;height:100%;top:0;pointer-events:none}body #ssTempHolder video{width:auto !important;height:auto !important;max-width:100% !important;max-height:100% !important;top:0 !important;left:0 !important;transform:none !important}body.ssTakeScreenshot .ssElement{z-index:100000000000 !important}body.ssTakeScreenshot.ssNetflix [data-uia=video-canvas]{z-index:10000000}body.ssTakeScreenshot.ssNetflix video{background-color:#000}body.ssTakeScreenshot.ssNetflix .player-timedtext{display:none !important}body.ssTakeScreenshot.ssNetflix.showSubs .player-timedtext{display:block !important}body.ssTakeScreenshot.ssAmazon .scalingVideoContainer{z-index:99999999 !important}body.ssTakeScreenshot.ssDisney .btm-media-overlays-container{display:none}body.ssTakeScreenshot.ssDisney .dss-hls-subtitle-overlay{display:none}body.ssTakeScreenshot.ssDisney.showSubs .dss-hls-subtitle-overlay{display:block}body.ssTakeScreenshot.ssHulu .ContentPlayer__contentArea{z-index:10000000000;position:relative}body.ssTakeScreenshot.ssHulu .ClosedCaption{display:none}body.ssTakeScreenshot.ssHulu.showSubs .ClosedCaption{display:block}body.ssTakeScreenshot.ssHulu.showSubs .ClosedCaption .ClosedCaption__outband{bottom:30px !important}body.ssTakeScreenshot.ssHBO video{z-index:99999999}body.ssTakeScreenshot.ssHBO *:has(video){z-index:99999999}body.ssTakeScreenshot.ssYoutube .html5-video-container,body.ssTakeScreenshot.ssYoutube .ytp-caption-window-container{z-index:999999999 !important}body.ssTakeScreenshot.ssApple #apple-music-video-player{z-index:999999999 !important}body.ssTakeScreenshot.ssApple .scrim{display:none}body .ssWrapper{overflow:hidden}body .ssNotification{display:flex;width:100%;height:4rem;justify-content:center;align-items:center;position:fixed;z-index:1000000000;top:-4rem;animation-name:notification;animation-duration:2s;animation-iteration-count:1}@keyframes notification{0%{top:-4rem}25%{top:3rem}85%{top:3rem}}body .ssNotification .ssNContent{position:absolute;z-index:1000000000;padding:.75rem 1.25em;margin-bottom:1em;border:1px solid rgba(0,0,0,0);border-radius:.25em;font-size:12px;height:fit-content;top:0}body .ssNotification .ssNContent.success{background-color:#d4edda;border-color:#c3e6cb;color:#155724}body .ssNotification .ssNContent.fail{background-color:#edd4d4;border-color:#e6c3c3;color:#b62424}body .ssModal{display:none;position:fixed;z-index:100000000;right:20px;opacity:0;background-color:#fffefa;border-radius:3px;padding:25px;color:#525252;font-family:muli,sans-serif;box-shadow:0px 4px 8px 0px rgba(0,0,0,.15);animation-name:animateOn;animation-duration:.2s;animation-fill-mode:forwards}body .ssModal.visible{display:block}body .ssModal *{vertical-align:middle;line-height:normal;font-weight:normal}@keyframes animateOn{from{opacity:0;top:0px}to{opacity:1;top:20px}}body .ssModal .close{position:absolute;right:10px;top:10px;cursor:pointer;opacity:.5;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0NDMuNCA0NDMuNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQzLjQgNDQzLjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZD0iTTYuOCw0MDMuNWwxODEuOC0xODEuOEw2LjgsMzkuOWMtNS45LTUuOS04LjItMTQuNS02LTIyLjZDMyw5LjIsOS4yLDMsMTcuMywwLjhjOC4xLTIuMiwxNi43LDAuMSwyMi42LDZsMTgxLjgsMTgxLjgKCUw0MDMuNSw2LjhjNS45LTUuOSwxNC41LTguMiwyMi42LTZjOC4xLDIuMiwxNC40LDguNCwxNi41LDE2LjVjMi4yLDguMS0wLjEsMTYuNy02LDIyLjZMMjU0LjcsMjIxLjdsMTgxLjgsMTgxLjgKCWM1LjksNS45LDguMiwxNC41LDYsMjIuNmMtMi4yLDguMS04LjQsMTQuNC0xNi41LDE2LjVjLTguMSwyLjItMTYuNy0wLjEtMjIuNi02TDIyMS43LDI1NC43TDM5LjksNDM2LjVjLTUuOSw1LjktMTQuNSw4LjItMjIuNiw2CglDOS4yLDQ0MC40LDMsNDM0LjEsMC44LDQyNkMtMS40LDQxOCwwLjksNDA5LjQsNi44LDQwMy41TDYuOCw0MDMuNXoiLz4KPC9zdmc+Cg==);width:10px;height:10px}body .ssModal .ssButtons{margin-top:25px;text-align:right}body .ssModal .ssButtons .ssButton,body .ssModal .ssButtons a .ssButton{display:inline-block;height:20px;padding:3px 12px 3px;margin-left:14px;border-radius:4px;box-shadow:0px 4px 8px 0px rgba(0,0,0,.15);background-color:#fff;font-size:12px;color:#525252;line-height:20px;font-weight:normal;cursor:pointer;text-decoration:none}body .ssModal .ssButtons .ssButton .emoji,body .ssModal .ssButtons a .ssButton .emoji{font-size:15px;vertical-align:bottom}body .ssModal .ssButtons .ssButton.blue,body .ssModal .ssButtons a .ssButton.blue{background-color:#19acef;color:#fff}body .ssModal .icon{background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIKCSBpZD0iTGF5ZXJfMSIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCgkgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxMDAgODMuOSIKCSBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMDAgODMuOTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMwMEFERUY7fQo8L3N0eWxlPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC05NTIuMzYyMTgpIj4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zNS42LDk1Mi40Yy0xLjMsMC0yLjQsMS0yLjksMS44bC01LjYsMTEuMUgxMWMtNiwwLTExLDUtMTEsMTF2NDljMCw2LDUsMTEsMTEsMTFoNzhjNiwwLDExLTUsMTEtMTF2LTQ5CgkJYzAtNi01LTExLTExLTExSDcyLjlsLTUuNi0xMS4xYy0wLjUtMS4xLTEuNi0xLjgtMi45LTEuOEwzNS42LDk1Mi40TDM1LjYsOTUyLjR6IE0zNy42LDk1OC44aDI1LjJsNS41LDExLjEKCQljMC41LDEuMSwxLjYsMS44LDIuOSwxLjhoMTguMWMyLjYsMCw0LjUsMS45LDQuNSw0LjV2NDljMCwyLjYtMS45LDQuNS00LjUsNC41SDExLjFjLTIuNiwwLTQuNS0xLjktNC41LTQuNXYtNDkKCQljMC0yLjYsMS45LTQuNSw0LjUtNC41aDE4LjFjMS4xLDAsMi40LTAuOCwyLjktMS44TDM3LjYsOTU4Ljh6IE01MC4yLDk3OS44Yy0xMS42LDAtMjEsOS40LTIxLDIxczkuNCwyMSwyMSwyMXMyMS05LjQsMjEtMjEKCQlTNjEuOCw5NzkuOCw1MC4yLDk3OS44eiBNNTAuMiw5ODYuMmM4LjEsMCwxNC41LDYuNSwxNC41LDE0LjVzLTYuNSwxNC41LTE0LjUsMTQuNXMtMTQuNS02LjUtMTQuNS0xNC41UzQyLjEsOTg2LjIsNTAuMiw5ODYuMnoiLz4KPC9nPgo8L3N2Zz4K);background-repeat:no-repeat;width:30px;height:30px;vertical-align:top;margin-right:22px;margin-top:2px;display:inline-block}body .ssModal .body{display:inline-block;width:315px}body .ssModal .body .title{font-size:15px;font-weight:600;margin-bottom:7px}body .ssModal .body .description{font-size:13px;font-weight:lighter}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3Njc3MvU2NyZWVuc2hvdENvbnRyb2wvX2J1dHRvbnMuc2NzcyIsIndlYnBhY2s6Ly8uL3Njc3MvU2NyZWVuc2hvdENvbnRyb2wuc2NzcyIsIndlYnBhY2s6Ly8uL3Njc3MvU2NyZWVuc2hvdENvbnRyb2wvX25vdGlmaWNhdGlvbnMuc2NzcyIsIndlYnBhY2s6Ly8uL3Njc3MvU2NyZWVuc2hvdENvbnRyb2wvX21vZGFsLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsY0FFQyxpQkFBQSxDQUNBLGlCQUFBLENBQ0EsZUFBQSxDQUNBLFdBQUEsQ0FDQSxZQUFBLENBQ0EsT0FBQSxDQUNBLGNBQUEsQ0FFQSxVQUFBLENBQ0EsV0FBQSxDQUNBLFFBQUEsQ0FDQSxTQUFBLENBQ0EsT0FBQSxDQUNBLFNBQUEsQ0FFQSxVQUFBLENBQ0Esa0JBQUEsQ0FFRyx3QkFBQSxDQUVBLG9CQUNJLG9CQUFBLENBQ0Esd0JBQUEsQ0FHSixvQkFDSSxzQkFBQSxDQUNBLFNBQUEsQ0FRUixjQUVDLGVBQUEsQ0FDQSxXQUFBLENBRUEsNEJBQUEsQ0FDRywwQkFBQSxDQUNBLHFCQUFBLENBRUgseUJBQ0MscUJBQUEsQ0FDQSw0QkFBQSxDQUlGLFlBRUMsc0JBQUEsQ0FDRyxxQkFBQSxDQUVBLHlCQUFBLENBRUgsbUJBRUMscUJBQUEsQ0FDQSxzQkFBQSxDQUVBLHVCQUNDLFVBQUEsQ0FNSCxjQUNDLGVBQUEsQ0FDQSxXQUFBLENBQ0EsY0FBQSxDQUVBLFVBQUEsQ0FFQSxjQUFBLENBR0Esb0JBQUEsQ0FDQSxhQUFBLENBVUEsa0JBRUMsNkJBQUEsQ0FJRSxvQkFDSSxvQkFBQSxDQUNILHdCQUFBLENBSUwsV0FFQyxVQUFBLENBQ0EsY0FBQSxDQUNBLGlCQUFBLENBQ0EsVUFBQSxDQUNBLGNBQUEsQ0FFQSxpQkFDQyxTQUFBLENBSUYsYUFDQyxrQkFBQSxDQUVBLFlBQUEsQ0FFRSxjQUFBLENBQ0EsVUFBQSxDQUlDLG1CQUNJLFNBQUEsQ0FJUiwwQkFBQSxhQUFBLG9CQUFBLENBQUEscUJBQUEsQ0FBQSxDQUNBLDBCQUFBLGFBQUEsVUFBQSxDQUFBLFdBQUEsQ0FBQSxDQUdBLFVBRUksVUFBQSxDQUNBLFdBQUEsQ0FDQSxpQkFBQSxDQUNBLFVBQUEsQ0FDQSxjQUFBLENBQ0EsWUFBQSxDQUNBLHNCQUFBLENBQ0Esa0JBQUEsQ0FFSCxnQkFDQyxTQUFBLENBQ0Esb0JBQUEsQ0FHRCxjQUNDLFVBQUEsQ0FDQSxXQUFBLENBSUYsYUFHSSxVQUFBLENBRUgsbUJBQ0MsU0FBQSxDQUdELGlCQUNDLHFCQUFBLENBQ0Esc0JBQUEsQ0FDQSxlQUFBLENBQ0EsZ0JBQUEsQ0FJRixZQUlDLGNBQUEsQ0FHRyxVQUFBLENBRUgsa0JBQ0MsU0FBQSxDQUdELGdCQUNDLHFCQUFBLENBQ0Esc0JBQUEsQ0FDQSwyQkFBQSxDQzNMRCxtQkFDQyxjQUFBLENBQ0EscUJBQUEsQ0FDQSxVQUFBLENBQ0EsV0FBQSxDQUNBLEtBQUEsQ0FDQSxtQkFBQSxDQUVBLHlCQUNDLHFCQUFBLENBQ0Esc0JBQUEsQ0FDQSx5QkFBQSxDQUNBLDBCQUFBLENBQ0EsZ0JBQUEsQ0FDQSxpQkFBQSxDQUNBLHlCQUFBLENBTUQsaUNBQ0MsK0JBQUEsQ0FLQSx3REFDQyxnQkFBQSxDQUdELHNDQUNDLHFCQUFBLENBSUQsa0RBRUMsdUJBQUEsQ0FLQSwyREFFQyx3QkFBQSxDQVFGLHNEQUNDLDJCQUFBLENBTUQsNkRBQ0MsWUFBQSxDQUdELHlEQUNDLFlBQUEsQ0FLQSxrRUFDQyxhQUFBLENBTUYseURBQ0MsbUJBQUEsQ0FDRyxpQkFBQSxDQUdKLDRDQUNDLFlBQUEsQ0FJQSxxREFDQyxhQUFBLENBRUEsNkVBQ0Msc0JBQUEsQ0FRSCxrQ0FDQyxnQkFBQSxDQUdELHlDQUNDLGdCQUFBLENBT0QscUhBQ0MsNEJBQUEsQ0FLRCx3REFDQyw0QkFBQSxDQUdELHFDQUNDLFlBQUEsQ0FLSCxnQkFDQyxlQUFBLENDcElGLHFCQUVJLFlBQUEsQ0FDQSxVQUFBLENBQ0EsV0FBQSxDQUNBLHNCQUFBLENBQ0Esa0JBQUEsQ0FDQSxjQUFBLENBQ0Esa0JBQUEsQ0FDQSxTQUFBLENBRUEsMkJBQUEsQ0FDQSxxQkFBQSxDQUNBLDJCQUFBLENBRUEsd0JBQ0ksR0FBQSxTQUFBLENBQ0EsSUFBQSxRQUFBLENBQ0EsSUFBQSxRQUFBLENBQUEsQ0FHSixpQ0FFSSxpQkFBQSxDQUNBLGtCQUFBLENBQ0EscUJBQUEsQ0FDQSxpQkFBQSxDQUNBLDhCQUFBLENBQ0EsbUJBQUEsQ0FDQSxjQUFBLENBQ0Esa0JBQUEsQ0FDQSxLQUFBLENBRUEseUNBQ0ksd0JBQUEsQ0FDQSxvQkFBQSxDQUNBLGFBQUEsQ0FHSixzQ0FDSSx3QkFBQSxDQUNBLG9CQUFBLENBQ0EsYUFBQSxDQzFDWixjQUVJLFlBQUEsQ0FNQSxjQUFBLENBQ0EsaUJBQUEsQ0FFQSxVQUFBLENBRUEsU0FBQSxDQUVBLHdCQUFBLENBQ0EsaUJBQUEsQ0FFQSxZQUFBLENBRUEsYUFBQSxDQUNBLDJCQUFBLENBUUEsMENBQUEsQ0FFQSx3QkFBQSxDQUNBLHNCQUFBLENBQ0EsNEJBQUEsQ0E3QkEsc0JBQ0ksYUFBQSxDQWtCSixnQkFDSSxxQkFBQSxDQUNBLGtCQUFBLENBQ0Esa0JBQUEsQ0FTSixxQkFDSSxLQUNJLFNBQUEsQ0FDQSxPQUFBLENBRUosR0FDSSxTQUFBLENBQ0EsUUFBQSxDQUFBLENBSVIscUJBQ0ksaUJBQUEsQ0FDQSxVQUFBLENBQ0EsUUFBQSxDQUNBLGNBQUEsQ0FDQSxVQUFBLENBRUEsd0RBQUEsQ0FFQSxVQUFBLENBQ0EsV0FBQSxDQUlKLHlCQUVJLGVBQUEsQ0FDQSxnQkFBQSxDQUVBLHdFQUNJLG9CQUFBLENBRUEsV0FBQSxDQUVBLG9CQUFBLENBQ0EsZ0JBQUEsQ0FFQSxpQkFBQSxDQUNBLDBDQUFBLENBQ0EscUJBQUEsQ0FFQSxjQUFBLENBQ0EsYUFBQSxDQUNBLGdCQUFBLENBQ0Esa0JBQUEsQ0FFQSxjQUFBLENBRUEsb0JBQUEsQ0FFQSxzRkFDSSxjQUFBLENBQ0EscUJBQUEsQ0FHSixrRkFDSSx3QkFBQSxDQUNBLFVBQUEsQ0FLWixvQkFDSSx3REFBQSxDQUNBLDJCQUFBLENBRUEsVUFBQSxDQUNBLFdBQUEsQ0FFQSxrQkFBQSxDQUNBLGlCQUFBLENBQ0EsY0FBQSxDQUVBLG9CQUFBLENBR0osb0JBRUksb0JBQUEsQ0FDQSxXQUFBLENBRUEsMkJBQ0ksY0FBQSxDQUNBLGVBQUEsQ0FDQSxpQkFBQSxDQUVKLGlDQUNJLGNBQUEsQ0FDQSxtQkFBQSIsInNvdXJjZXNDb250ZW50IjpbIi5zc0J0bkRlZmF1bHQge1xuXHRcblx0cG9zaXRpb246IGFic29sdXRlO1xuXHR6LWluZGV4OiAxMDAwMDAwMDA7XG5cdGJhY2tncm91bmQ6bm9uZTtcblx0Ym9yZGVyOiBub25lO1xuXHRvdXRsaW5lOiBub25lO1xuXHRyaWdodDowO1xuXHRjdXJzb3I6IHBvaW50ZXI7XG5cdFxuXHR3aWR0aDogMjZweDtcblx0aGVpZ2h0OiAyNnB4O1xuXHRtYXJnaW46IDA7Ly81JSA4cHggMDtcblx0cGFkZGluZzowO1xuXHR0b3A6OHB4O1xuXHRyaWdodDo4cHg7XG5cdFxuXHRvcGFjaXR5OiAuNjtcblx0cG9pbnRlci1ldmVudHM6IGFsbDtcblx0Lyp0cmFuc2l0aW9uLWZpbGwtbW9kZTogZm9yd2FyZHM7Ki9cbiAgICB0cmFuc2l0aW9uLWR1cmF0aW9uOiAuMjVzO1xuXG4gICAgJjpob3ZlciB7XG4gICAgICAgIG9wYWNpdHk6IDEgIWltcG9ydGFudDsgXG4gICAgICAgIHRyYW5zaXRpb24tZHVyYXRpb246IC4yNXM7XG4gICAgfVxuXG4gICAgLmZhZGUge1xuICAgICAgICB0cmFuc2l0aW9uLWR1cmF0aW9uOiA1cztcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICB9XG4gICAgXG4gICAgLypzdmcge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOnJlZDtcbiAgICB9Ki9cbn1cblxuLnNzQnRuWW91VHViZSB7XG5cblx0YmFja2dyb3VuZDpub25lO1xuXHRib3JkZXI6IG5vbmU7XG5cdFxuXHRtYXJnaW4tcmlnaHQ6IDIwcHggIWltcG9ydGFudDtcbiAgICBwYWRkaW5nLXRvcDogMHB4ICFpbXBvcnRhbnQ7XG4gICAgd2lkdGg6IDI1cHggIWltcG9ydGFudDtcblxuXHQueXRwLWVtYmVkICYge1xuXHRcdHdpZHRoOiAyMHB4ICFpbXBvcnRhbnQ7XG5cdFx0bWFyZ2luLXJpZ2h0OiAxNXB4ICFpbXBvcnRhbnQ7XG5cdH1cbn1cblxuLnNzQnRuVmltZW8ge1xuXG5cdGhlaWdodDogMnJlbSAhaW1wb3J0YW50O1xuICAgIHdpZHRoOiAycmVtICFpbXBvcnRhbnQ7XG4gICAgLy9wYWRkaW5nOiA2cHggIWltcG9ydGFudDtcbiAgICBtYXJnaW4tdG9wOiA4cHggIWltcG9ydGFudDtcblxuXHRidXR0b24ge1xuXG5cdFx0d2lkdGg6IDEwMCUgIWltcG9ydGFudDtcblx0XHRoZWlnaHQ6IDEwMCUgIWltcG9ydGFudDtcblx0XHRcblx0XHRzdmcge1xuXHRcdFx0d2lkdGg6IDE5cHg7XG5cdFx0fVxuXHR9XG5cbn1cblxuLnNzQnRuTmV0ZmxpeCB7XG5cdGJhY2tncm91bmQ6bm9uZTtcblx0Ym9yZGVyOiBub25lO1xuXHRjdXJzb3I6IHBvaW50ZXI7XG5cblx0d2lkdGg6NHJlbTtcblx0XG5cdG1hcmdpbjogMCAwLjVyZW07XG5cdC8vbWFyZ2luOiAwIDJyZW0gMCA0cmVtO1xuXG5cdGRpc3BsYXk6aW5saW5lLWJsb2NrO1xuXHRmbGV4LXNocmluazogMDtcblx0XG5cdC8vbWFyZ2luLXRvcDotMXJlbTtcblx0Ly9oZWlnaHQ6Mi40cmVtO1xuXHQvL3dpZHRoOiA1MHB4O1xuXHQvL2hlaWdodDogMzVweCAhaW1wb3J0YW50O1xuXHQvL3dpZHRoOiAxMDAlOy8vMy42ZW0gIWltcG9ydGFudDtcbiAgICAvL2hlaWdodDogMTAwJTsvLzEuNmVtICFpbXBvcnRhbnQ7XG5cdC8vcGFkZGluZzowIDAgLjZlbSAwO1xuXG5cdCYgPiBzdmcge1xuXHRcdC8vbWFyZ2luLXRvcDotLjNyZW07XG5cdFx0dHJhbnNmb3JtOnRyYW5zbGF0ZVkoLS4zcmVtKTtcblx0XHQvL3RyYW5zZm9ybTogc2NhbGUoLjUpO1xuXHR9XG4gICAgXG4gICAgJjpob3ZlciB7XG4gICAgICAgIHRyYW5zZm9ybTpzY2FsZSgxLjIpO1xuXHQgICAgdHJhbnNpdGlvbi1kdXJhdGlvbjogLjI1cztcbiAgICB9XG59XG5cbi5zc0J0bkh1bHUge1xuXHRcblx0d2lkdGg6IDI3cHg7XG5cdG1hcmdpbi10b3A6IDRweDtcblx0bWFyZ2luLXJpZ2h0OjEwcHg7XG5cdG9wYWNpdHk6IC43O1xuXHRjdXJzb3I6IHBvaW50ZXI7XG5cdFxuXHQmOmhvdmVyIHtcblx0XHRvcGFjaXR5OiAxO1xuXHR9XG59XG5cbi5zc0J0bkFtYXpvbiB7XG5cdG1hcmdpbi1yaWdodDogMS41dnc7XG4gICAgXG5cdG91dGxpbmU6IG5vbmU7XG5cdFxuICAgY3Vyc29yOiBwb2ludGVyO1xuICAgb3BhY2l0eTogLjg7XG5cbiAgIC8vei1pbmRleDogOTk5OTk5OTk5OTtcblxuICAgICY6aG92ZXIge1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgIH1cbn1cblxuQG1lZGlhIChtaW4td2lkdGg6IDEyMDBweCkgeyAuc3NCdG5BbWF6b24geyB3aWR0aDogMS42NjY2NjY2NjY2NjY2NjY1dnc7IGhlaWdodDogMS42NjY2NjY2NjY2NjY2NjY1dnc7IH0gfVxuQG1lZGlhIChtYXgtd2lkdGg6IDExOTlweCkgeyAuc3NCdG5BbWF6b24geyB3aWR0aDogMjBweDsgaGVpZ2h0OiAyMHB4OyB9IH1cblxuXG4uc3NCdG5IQk8ge1xuXG4gICAgd2lkdGg6IDQ4cHg7XG4gICAgaGVpZ2h0OiA0OHB4O1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBvcGFjaXR5OiAwLjc7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuXHQmOmhvdmVyIHtcblx0XHRvcGFjaXR5OiAxO1xuXHRcdHRyYW5zZm9ybTogc2NhbGUoMS4yKTtcblx0fVxuXG5cdHN2ZyB7XG5cdFx0d2lkdGg6IDI0cHg7XG5cdFx0aGVpZ2h0OiAyNHB4O1xuXHR9XG59XG5cbi5zc0J0bkRpc25leSB7XG5cdC8vd2lkdGg6IDI2cHg7XG4gICAgLy9tYXJnaW4tcmlnaHQ6IDEzcHg7XG4gICAgb3BhY2l0eTogLjc7XG5cblx0Jjpob3ZlciB7XG5cdFx0b3BhY2l0eTogMTtcblx0fVxuXG5cdHN2ZyB7XG5cdFx0d2lkdGg6IDI1cHggIWltcG9ydGFudDtcblx0XHRoZWlnaHQ6IDMxcHggIWltcG9ydGFudDtcblx0XHRwYWRkaW5nLXRvcDogNHB4O1xuXHRcdG1hcmdpbi1yaWdodDogN3B4O1xuXHR9XG59XG5cbi5zc0J0bkFwcGxlIHtcblx0Ly93aWR0aDogMjZweDtcbiAgICAvL21hcmdpbi1yaWdodDogMTNweDtcblxuXHRjdXJzb3I6IHBvaW50ZXI7XG5cblxuICAgIG9wYWNpdHk6IC43O1xuXG5cdCY6aG92ZXIge1xuXHRcdG9wYWNpdHk6IDE7XG5cdH1cblxuXHRzdmcge1xuXHRcdHdpZHRoOiAyMnB4ICFpbXBvcnRhbnQ7XG5cdFx0aGVpZ2h0OiAyMnB4ICFpbXBvcnRhbnQ7XG5cdFx0bWFyZ2luLXJpZ2h0OiAycHggIWltcG9ydGFudDtcblx0fVxufSIsIkBpbXBvcnQgXCJTY3JlZW5zaG90Q29udHJvbC9idXR0b25zXCI7XG5cbmJvZHkge1xuXG5cdCNzc1RlbXBIb2xkZXIge1xuXHRcdHBvc2l0aW9uOmZpeGVkO1xuXHRcdHotaW5kZXg6MTAwMDAwMDAwMDAwMDtcblx0XHR3aWR0aDoxMDAlO1xuXHRcdGhlaWdodDoxMDAlO1xuXHRcdHRvcDowO1xuXHRcdHBvaW50ZXItZXZlbnRzOiBub25lO1xuXG5cdFx0dmlkZW8ge1xuXHRcdFx0d2lkdGg6YXV0byAhaW1wb3J0YW50O1xuXHRcdFx0aGVpZ2h0OmF1dG8gIWltcG9ydGFudDtcblx0XHRcdG1heC13aWR0aDoxMDAlICFpbXBvcnRhbnQ7XG5cdFx0XHRtYXgtaGVpZ2h0OiAxMDAlICFpbXBvcnRhbnQ7XG5cdFx0XHR0b3A6IDAgIWltcG9ydGFudDtcblx0XHRcdGxlZnQ6IDAgIWltcG9ydGFudDtcblx0XHRcdHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xuXHRcdH1cblx0fVxuXG5cdCYuc3NUYWtlU2NyZWVuc2hvdCB7XG5cdFx0XG5cdFx0LnNzRWxlbWVudCB7XG5cdFx0XHR6LWluZGV4OiAxMDAwMDAwMDAwMDAgIWltcG9ydGFudDtcblx0XHR9XG5cdFx0XG5cdFx0Ji5zc05ldGZsaXgge1xuXHRcblx0XHRcdFtkYXRhLXVpYT12aWRlby1jYW52YXNdIHtcblx0XHRcdFx0ei1pbmRleDogMTAwMDAwMDA7XG5cdFx0XHR9XG5cdFx0XHRcblx0XHRcdHZpZGVvIHtcblx0XHRcdFx0YmFja2dyb3VuZC1jb2xvcjogIzAwMDAwMDtcblx0XHRcdFx0Ly9oZWlnaHQ6IGF1dG8gIWltcG9ydGFudDtcblx0XHRcdH1cblxuXHRcdFx0LnBsYXllci10aW1lZHRleHQge1xuXG5cdFx0XHRcdGRpc3BsYXk6bm9uZSAhaW1wb3J0YW50O1xuXHRcdFx0fVx0XHRcdFxuXG5cdFx0XHQmLnNob3dTdWJzIHtcblx0XHRcdFx0XG5cdFx0XHRcdC5wbGF5ZXItdGltZWR0ZXh0IHtcblxuXHRcdFx0XHRcdGRpc3BsYXk6IGJsb2NrICFpbXBvcnRhbnQ7XG5cdFx0XHRcdFx0Ly9ib3R0b206IDEwJSAhaW1wb3J0YW50O1xuXHRcdFx0XHR9XG5cdFx0XHR9XG5cdFx0fVxuXG5cdFx0Ji5zc0FtYXpvbiB7XG5cblx0XHRcdC5zY2FsaW5nVmlkZW9Db250YWluZXIge1xuXHRcdFx0XHR6LWluZGV4OiA5OTk5OTk5OSAhaW1wb3J0YW50O1xuXHRcdFx0fVxuXHRcdH1cblxuXHRcdCYuc3NEaXNuZXkge1xuXG5cdFx0XHQuYnRtLW1lZGlhLW92ZXJsYXlzLWNvbnRhaW5lciB7XG5cdFx0XHRcdGRpc3BsYXk6bm9uZTtcblx0XHRcdH1cblxuXHRcdFx0LmRzcy1obHMtc3VidGl0bGUtb3ZlcmxheSB7XG5cdFx0XHRcdGRpc3BsYXk6IG5vbmU7XG5cdFx0XHR9XG5cblx0XHRcdCYuc2hvd1N1YnMge1xuXHRcdFx0XHRcblx0XHRcdFx0LmRzcy1obHMtc3VidGl0bGUtb3ZlcmxheSB7XG5cdFx0XHRcdFx0ZGlzcGxheTogYmxvY2s7XG5cdFx0XHRcdH1cblx0XHRcdH1cblx0XHR9XG5cblx0XHQmLnNzSHVsdSB7XG5cdFx0XHQuQ29udGVudFBsYXllcl9fY29udGVudEFyZWEge1xuXHRcdFx0XHR6LWluZGV4OiAxMDAwMDAwMDAwMDtcbiAgICBcdFx0XHRwb3NpdGlvbjogcmVsYXRpdmU7XG5cdFx0XHR9XG5cblx0XHRcdC5DbG9zZWRDYXB0aW9uIHtcblx0XHRcdFx0ZGlzcGxheTpub25lO1xuXHRcdFx0fVxuXG5cdFx0XHQmLnNob3dTdWJzIHtcblx0XHRcdFx0LkNsb3NlZENhcHRpb24ge1xuXHRcdFx0XHRcdGRpc3BsYXk6YmxvY2s7XG5cblx0XHRcdFx0XHQuQ2xvc2VkQ2FwdGlvbl9fb3V0YmFuZCB7XG5cdFx0XHRcdFx0XHRib3R0b206IDMwcHggIWltcG9ydGFudDtcblx0XHRcdFx0XHR9XG5cdFx0XHRcdH1cblx0XHRcdH1cblx0XHR9XG5cblx0XHQmLnNzSEJPIHtcblxuXHRcdFx0dmlkZW8ge1xuXHRcdFx0XHR6LWluZGV4OiA5OTk5OTk5OTtcblx0XHRcdH1cblxuXHRcdFx0KjpoYXModmlkZW8pIHtcblx0XHRcdFx0ei1pbmRleDogOTk5OTk5OTk7XG5cdFx0XHR9XG5cblx0XHR9XG5cblx0XHQmLnNzWW91dHViZSB7XG5cblx0XHRcdC5odG1sNS12aWRlby1jb250YWluZXIsIC55dHAtY2FwdGlvbi13aW5kb3ctY29udGFpbmVyIHtcblx0XHRcdFx0ei1pbmRleDogOTk5OTk5OTk5ICFpbXBvcnRhbnQ7XG5cdFx0XHR9XG5cdFx0fVxuXG5cdFx0Ji5zc0FwcGxlIHtcblx0XHRcdCNhcHBsZS1tdXNpYy12aWRlby1wbGF5ZXIge1xuXHRcdFx0XHR6LWluZGV4OiA5OTk5OTk5OTkgIWltcG9ydGFudDtcblx0XHRcdH1cblxuXHRcdFx0LnNjcmltIHtcblx0XHRcdFx0ZGlzcGxheTpub25lO1xuXHRcdFx0fVxuXHRcdH1cblx0fVxuXG5cdC5zc1dyYXBwZXIge1xuXHRcdG92ZXJmbG93OiBoaWRkZW47XG5cdH1cblxuXHRAaW1wb3J0IFwiU2NyZWVuc2hvdENvbnRyb2wvbm90aWZpY2F0aW9uc1wiO1xuXHRAaW1wb3J0IFwiU2NyZWVuc2hvdENvbnRyb2wvbW9kYWxcIjtcbn0iLCIuc3NOb3RpZmljYXRpb24ge1xuXG4gICAgZGlzcGxheTogZmxleDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDRyZW07XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgei1pbmRleDogMTAwMDAwMDAwMDtcbiAgICB0b3A6LTRyZW07XG5cbiAgICBhbmltYXRpb24tbmFtZTogbm90aWZpY2F0aW9uO1xuICAgIGFuaW1hdGlvbi1kdXJhdGlvbjogMnM7XG4gICAgYW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDogMTtcblxuICAgIEBrZXlmcmFtZXMgbm90aWZpY2F0aW9uIHtcbiAgICAgICAgMCUge3RvcDogLTRyZW07fVxuICAgICAgICAyNSUge3RvcDogM3JlbTt9XG4gICAgICAgIDg1JSB7dG9wOiAzcmVtO31cbiAgICB9XG5cbiAgICAuc3NOQ29udGVudCB7XG4gICAgICAgIC8vY29udGVudDogJ1NjcmVlbnNob3QgY29waWVkIHRvIGNsaXBib2FyZCEnO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHotaW5kZXg6IDEwMDAwMDAwMDA7XG4gICAgICAgIHBhZGRpbmc6IC43NXJlbSAxLjI1ZW07XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdHJhbnNwYXJlbnQ7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IC4yNWVtO1xuICAgICAgICBmb250LXNpemU6IDEycHg7XG4gICAgICAgIGhlaWdodDogZml0LWNvbnRlbnQ7XG4gICAgICAgIHRvcDowO1xuXG4gICAgICAgICYuc3VjY2VzcyB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZDRlZGRhO1xuICAgICAgICAgICAgYm9yZGVyLWNvbG9yOiAjYzNlNmNiO1xuICAgICAgICAgICAgY29sb3I6ICMxNTU3MjQ7XG4gICAgICAgIH1cbiAgICBcbiAgICAgICAgJi5mYWlsIHtcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNlZGQ0ZDQ7XG4gICAgICAgICAgICBib3JkZXItY29sb3I6ICNlNmMzYzM7XG4gICAgICAgICAgICBjb2xvcjogI2I2MjQyNDtcbiAgICAgICAgfVxuICAgIH1cblxufSIsIi5zc01vZGFsIHtcblxuICAgIGRpc3BsYXk6IG5vbmU7XG5cbiAgICAmLnZpc2libGUge1xuICAgICAgICBkaXNwbGF5OmJsb2NrO1xuICAgIH1cblxuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB6LWluZGV4OiAxMDAwMDAwMDA7XG5cbiAgICByaWdodDoyMHB4O1xuICAgIFxuICAgIG9wYWNpdHk6IDA7XG5cbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiNmZmZlZmE7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xuXG4gICAgcGFkZGluZzogMjVweDtcblxuICAgIGNvbG9yOiAjNTI1MjUyO1xuICAgIGZvbnQtZmFtaWx5OiBtdWxpLCBzYW5zLXNlcmlmO1xuICAgIFxuICAgICoge1xuICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICBsaW5lLWhlaWdodDogbm9ybWFsO1xuICAgICAgICBmb250LXdlaWdodDogbm9ybWFsO1xuICAgIH1cblxuICAgIGJveC1zaGFkb3c6IDBweCA0cHggOHB4IDBweCByZ2JhKDAsIDAsIDAsIDAuMTUpO1xuXG4gICAgYW5pbWF0aW9uLW5hbWU6IGFuaW1hdGVPbjtcbiAgICBhbmltYXRpb24tZHVyYXRpb246IC4ycztcbiAgICBhbmltYXRpb24tZmlsbC1tb2RlOiBmb3J3YXJkcztcblxuICAgIEBrZXlmcmFtZXMgYW5pbWF0ZU9uIHtcbiAgICAgICAgZnJvbSB7XG4gICAgICAgICAgICBvcGFjaXR5OiAwO1xuICAgICAgICAgICAgdG9wOiAwcHg7XG4gICAgICAgIH1cbiAgICAgICAgdG8ge1xuICAgICAgICAgICAgb3BhY2l0eTogMTtcbiAgICAgICAgICAgIHRvcDogMjBweDtcbiAgICAgICAgfVxuICAgIH1cblxuICAgIC5jbG9zZSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgcmlnaHQ6IDEwcHg7XG4gICAgICAgIHRvcDogMTBweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBvcGFjaXR5OiAuNTtcblxuICAgICAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL2ltYWdlcy9jbG9zZS5zdmcnKTtcblxuICAgICAgICB3aWR0aDoxMHB4O1xuICAgICAgICBoZWlnaHQ6MTBweDtcblxuICAgIH1cblxuICAgIC5zc0J1dHRvbnMge1xuXG4gICAgICAgIG1hcmdpbi10b3A6IDI1cHg7XG4gICAgICAgIHRleHQtYWxpZ246IHJpZ2h0O1xuXG4gICAgICAgIC5zc0J1dHRvbiwgYSAuc3NCdXR0b24ge1xuICAgICAgICAgICAgZGlzcGxheTppbmxpbmUtYmxvY2s7XG5cbiAgICAgICAgICAgIGhlaWdodDoyMHB4O1xuICAgICAgICAgICAgXG4gICAgICAgICAgICBwYWRkaW5nOjNweCAxMnB4IDNweDtcbiAgICAgICAgICAgIG1hcmdpbi1sZWZ0OiAxNHB4O1xuICAgICAgICAgICAgXG4gICAgICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgICAgICBib3gtc2hhZG93OiAwcHggNHB4IDhweCAwcHggcmdiYSgwLCAwLCAwLCAwLjE1KTtcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkZGRkY7XG4gICAgICAgICAgICBcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgIGNvbG9yOiAjNTI1MjUyO1xuICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgICAgICAgICBmb250LXdlaWdodDogbm9ybWFsO1xuICAgIFxuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuXG4gICAgICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG5cbiAgICAgICAgICAgIC5lbW9qaSB7XG4gICAgICAgICAgICAgICAgZm9udC1zaXplOiAxNXB4O1xuICAgICAgICAgICAgICAgIHZlcnRpY2FsLWFsaWduOiBib3R0b207XG4gICAgICAgICAgICB9XG4gICAgXG4gICAgICAgICAgICAmLmJsdWUge1xuICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMxOWFjZWY7XG4gICAgICAgICAgICAgICAgY29sb3I6ICNGRkZGRkY7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG5cbiAgICAuaWNvbiB7XG4gICAgICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vaW1hZ2VzL2ljb25CbHVlLnN2ZycpO1xuICAgICAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuXG4gICAgICAgIHdpZHRoOjMwcHg7XG4gICAgICAgIGhlaWdodDozMHB4O1xuXG4gICAgICAgIHZlcnRpY2FsLWFsaWduOiB0b3A7XG4gICAgICAgIG1hcmdpbi1yaWdodDogMjJweDtcbiAgICAgICAgbWFyZ2luLXRvcDoycHg7XG5cbiAgICAgICAgZGlzcGxheTppbmxpbmUtYmxvY2s7XG4gICAgfVxuXG4gICAgLmJvZHkge1xuXG4gICAgICAgIGRpc3BsYXk6aW5saW5lLWJsb2NrO1xuICAgICAgICB3aWR0aDozMTVweDtcblxuICAgICAgICAudGl0bGUge1xuICAgICAgICAgICAgZm9udC1zaXplOiAxNXB4O1xuICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDdweDtcbiAgICAgICAgfVxuICAgICAgICAuZGVzY3JpcHRpb24ge1xuICAgICAgICAgICAgZm9udC1zaXplOiAxM3B4O1xuICAgICAgICAgICAgZm9udC13ZWlnaHQ6IGxpZ2h0ZXI7XG4gICAgICAgIH1cbiAgICB9XG5cbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style></head><body>
+    <center>
+        <div align="center" style="text-align:center;width:100%;height:100%;margin:0px;padding:0px">
+        <div align="center" style="text-align:center;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;color:rgb(51,51,51)">Get your order summary, estimated delivery date and more. &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+            &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+            &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+            &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+            &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+            &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+            &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+            &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+        </div>
+        <div class="m_-2774923715066548899maindiv" align="center" width="100%" height="100%" style="text-align:center;font-size:0px">
+            <img src="http://click.official.nike.com/open.aspx?ffcb10-fe8e15797d60067c7d-fe2b13707664007b7d1478-fe9815737560077476-ff2a17777163-fe2212787d650375761070-fe9815707364017f7c&amp;d=40129&amp;bmt=0" width="1" height="1" alt="" mefzrssyn="" b20a63uam="">
+            <table class="m_-2774923715066548899maintable" width="100%" align="center" cellspacing="0" cellpadding="0" border="0" style="padding:0px;font-size:0px" role="presentation">
+                <tbody>
+                    <tr>
+                    <td class="m_-2774923715066548899sidebar" style="font-size:0px;line-height:1px;overflow:hidden!important"> </td>
+                    <td class="m_-2774923715066548899outershell" width="642" valign="top" align="center" style="width:642px;border:1px solid rgb(229,229,229);max-width:642px!important;min-width:320px!important">
+                        <table class="m_-2774923715066548899innershell" bgcolor="#FFFFFF" align="center" width="100%" valign="top" cellpadding="0" cellspacing="0" border="0" style="border:medium;width:100%;padding:0px;border-collapse:collapse;min-width:320px!important;max-width:640px!important" role="presentation">
+                            <tbody>
+                                <tr>
+                                <td class="m_-2774923715066548899container" align="center">
+                                    <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%">
+                                        <tbody>
+                                            <tr>
+                                            <td align="center" style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(229,229,229)">
+                                                <table width="100%" style="border-spacing:0px" role="presentation">
+                                                    <tbody>
+                                                        <tr>
+                                                        <td bgcolor="#F7F7F7" align="center" style="padding:0px">
+                                                            <table align="center" width="94%" valign="top" cellpadding="0" cellspacing="0" border="0" style="margin:0px auto;max-width:100%;min-width:320px;border:medium;border-collapse:collapse" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td align="left" valign="middle" style="padding:20px;font-size:0px">
+                                                                        <table width="100%" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                <td valign="top" align="left" style="font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;line-height:26px;padding:0px;color:rgb(17,17,17)">
+                                                                                    Shipping to: WHOLE_NAME
+                                                                                </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                <td valign="top" align="left" style="font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:26px;color:rgb(102,102,102)">
+                                                                                    <p style="font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:26px;margin:0px;color:rgb(102,102,102)"><span class="m_-2774923715066548899address" style="font-family:Helvetica,Arial,sans-serif">ADDRESS1, ADDRESS2, ADDRESS3</span></p>
+                                                                                </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td bgcolor="#ffffff" align="center" style="border-top-width:1px;border-top-style:solid;padding:0px;border-top-color:rgb(229,229,229)">
+                                                            <div style="line-height:0px;padding:0px;width:0px;height:0px;display:none!important">
+                                                            </div>
+                                                            <table width="100%" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td style="text-align:center;font-size:14px;padding:50px 0px 20px" align="center">
+                                                                        <table style="border-spacing:0px;min-width:275px;width:65%;margin:0px auto" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                <td style="padding:0px 0px 30px;text-align:center" align="left">
+                                                                                    <a href="http://click.official.nike.com/?qs=1d020c5277199bbf5a82305502c167d231dbcdf9b39e14d5c5e3d6623d07cd59129a39e3cceea7c21db17ebf57241ce11b98c13c85a7b0dd230367bd49aa6d87" target="_blank"><img style="border: 0px;" src="http://image.official.nike.com/lib/fe9815737560077476/m/3/Swoosh2x.png" width="57" alt="logo"></a>
+                                                                                </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                <td style="padding:0px 0px 15px;text-align:center" align="left">
+                                                                                    <h1 style="font-size:28px;line-height:34px;font-family:Helvetica,Arial,sans-serif;margin:0px;color:rgb(17,17,17)">
+                                                                                        <span style="font-size:28px;line-height:34px;font-family:'Nike TG',Helvetica,Arial,sans-serif;color:rgb(17,17,17)">Thanks, FIRSTNAME! We're On It.</span>
+                                                                                    </h1>
+                                                                                </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                <td style="padding:0px 0px 20px;text-align:center;line-height:26px;font-family:Helvetica,Arial,sans-serif;color:rgb(109,109,109)" align="left">
+                                                                                    <span style="font-family:Helvetica,Arial,sans-serif">
+                                                                                    Your order's in. We're working to get it packed up and out the door. We may send your order in more than one shipment, and if we do, we'll send a shipping confirmation email as each shipment goes out.
+                                                                                    </span>
+                                                                                </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td bgcolor="#ffffff" align="center" style="padding:0px">
+                                                            <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="padding:0px">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td bgcolor="#ffffff" align="center" style="border-top-width:1px;border-top-style:solid;padding:0px;border-top-color:rgb(229,229,229)">
+                                                                        <table align="center" width="94%" valign="top" cellpadding="0" cellspacing="0" border="0" style="margin:0px auto;max-width:100%;min-width:320px;border:medium;border-collapse:collapse" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                <td style="text-align:center;font-size:14px;padding:20px">
+                                                                                    <table width="100%" role="presentation">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                            <td style="padding:0px;text-align:left;margin:0px" align="left">
+                                                                                                <span style="font-size:14px;font-family:Helvetica,Arial,sans-serif;line-height:24px;color:rgb(1,127,7)">Estimated Delivery Date DATE</span>
+                                                                                            </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    <td bgcolor="" align="center" style="padding:0px 0px 40px">
+                                                                        <div class="m_-2774923715066548899ghostdiv" style="width:300px;border:medium;display:inline-table;font-size:0px;vertical-align:top;padding:0px!important">
+                                                                            <table class="m_-2774923715066548899container" align="center" width="100%" bgcolor="#FFFFFF" valign="top" border="0" cellpadding="0" cellspacing="0" style="font-size:16px;margin:0px;padding:0px;line-height:1.5;border-collapse:collapse;text-align:center;color:white" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table style="margin-bottom:10px!important">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td align="center" valign="top" style="padding:0px 10px;text-align:center;background-color:rgb(246,244,248)">
+                                                                                                    <img border="0" width="280" height="280" style="width: 280px; height: 280px; border: medium; border-collapse: collapse; display: block; padding: 0px; background-color: rgb(246, 244, 248);" src="IMAGE" alt="">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div class="m_-2774923715066548899ghostdiv" style="width:280px;border:medium;display:inline-table;font-size:0px;vertical-align:top;padding:0px!important">
+                                                                            <table width="100%" bgcolor="#FFFFFF" align="left" valign="top" cellpadding="0" cellspacing="0" style="font-size:16px;margin:0px;padding:0px;line-height:1.5" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td style="padding:0px 10px">
+                                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td valign="top" align="left" style="font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(17,17,17)">PRODUCT_NAME</td>
+                                                                                                <td valign="top">
+                                                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                                                                                        <tbody>
+                                                                                                        <tr>
+                                                                                                            <td valign="top" align="right" width="75" style="white-space:nowrap;word-break:break-all;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;text-align:right;border:medium;color:rgb(17,17,17)">PRICE</td>
+                                                                                                        </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td valign="top" align="left" style="padding:0px 10px;width:200px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:22px;color:rgb(109,109,109)">SIZE</td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td bgcolor="#ffffff" align="center" style="border-top-width:1px;border-top-style:solid;padding:0px;border-top-color:rgb(229,229,229)">
+                                                            <table width="94%" style="margin:0px auto;min-width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td align="left" style="padding:20px 0px">
+                                                                        <div class="m_-2774923715066548899ghostdiv" style="border:medium;display:inline-table;font-size:0px;vertical-align:top;max-width:213px!important;padding:0px!important">
+                                                                            <table class="m_-2774923715066548899container" width="233" align="left" valign="top" border="0" cellpadding="0" cellspacing="0" style="font-size:14px;margin:0px;padding:0px;line-height:17px;border-collapse:collapse;max-width:213px!important;min-width:213px!important;color:white" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td valign="top" align="left" style="padding:20px 0px 0px 20px;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;line-height:26px;color:rgb(17,17,17)">
+                                                                                        Order Number
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td valign="top" align="left" style="padding:0px 0px 0px 20px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:26px;color:rgb(102,102,102)">
+                                                                                        #ORDER_NUMBER
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div class="m_-2774923715066548899ghostdiv" style="width:100%;border:medium;display:inline-table;font-size:0px;vertical-align:top;max-width:363px!important;padding:0px!important">
+                                                                            <table class="m_-2774923715066548899container" width="100%" align="left" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width:363px;font-size:14px;margin:0px;padding:0px;line-height:17px;border-collapse:collapse;min-width:320px!important;color:white" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td valign="top" width="150" align="left" style="width:150px;padding:20px 0px 0px 20px;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;line-height:26px;color:rgb(17,17,17)">
+                                                                                        Order Date
+                                                                                    </td>
+                                                                                    <td style="font-size:0px;max-width:40px"> </td>
+                                                                                    <td valign="top" width="150" align="left" style="width:150px;padding:20px 0px 0px 20px;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;line-height:26px;color:rgb(17,17,17)"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td valign="top" width="150" align="left" style="padding:0px 0px 20px 20px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:26px;color:rgb(102,102,102)">DATE</td>
+                                                                                    <td style="font-size:0px;max-width:40px"> </td>
+                                                                                    <td valign="top" width="150" align="left" style="padding:0px 0px 20px 20px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:26px;color:rgb(102,102,102)"></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div class="m_-2774923715066548899ghostdiv" style="width:100%;border:medium;display:inline-table;font-size:0px;vertical-align:top;max-width:100%!important;padding:0px!important">
+                                                                            <table class="m_-2774923715066548899container" width="100%" align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width:100%;font-size:14px;margin:0px;padding:0px;line-height:17px;border-collapse:collapse;min-width:320px!important;color:white" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td align="center" style="padding:20px 0px">
+                                                                                        <div style="line-height:0px;padding:0px;width:0px;height:0px;display:none!important">
+                                                                                        </div>
+                                                                                        <table class="m_-2774923715066548899button" width="225" align="center" style="margin:0px auto;height:40px;width:225px;border:1px solid rgb(141,141,141);border-radius:2px;display:inline-table" role="presentation">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td align="center" height="40" style="text-align:center;height:40px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:rgb(0,0,0)">
+                                                                                                    &zwnj;<a href="http://click.official.nike.com/?qs=1d020c5277199bbf127ec037e425b76f6c8d0f790f550eab96390af2ded38a4028760854dca092eadceb8d41bd2994cb9740b1a4673ce3283db660b8673403dd" style="min-width:140px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:15px;text-align:center;text-decoration:none;padding:10px 40px;border:1px hidden rgb(255,255,255);display:inline-block;color:rgb(0,0,0)" target="_blank">
+                                                                                                    <span style="font-size:14px;line-height:15px;font-family:'Nike TG',Helvetica,Arial,sans-serif;color:rgb(0,0,0)">
+                                                                                                    Order Status
+                                                                                                    </span>
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td bgcolor="#ffffff" align="center" style="border-top-width:1px;border-top-style:solid;padding:0px;border-top-color:rgb(229,229,229)">
+                                                            <table align="center" width="94%" valign="top" cellpadding="0" cellspacing="0" border="0" style="margin:0px auto;max-width:100%;min-width:320px;border:medium;border-collapse:collapse" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td align="left" valign="middle" style="padding:0px 20px;font-size:0px">
+                                                                        <table width="100%" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                <td align="center" style="font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;padding:40px 0px;color:rgb(109,109,109)">
+                                                                                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="padding:0px;margin:0px;border-collapse:collapse;font-family:Helvetica,Arial,sans-serif" role="presentation">
+                                                                                        <tbody style="font-family:Helvetica,Arial,sans-serif">
+                                                                                            <tr style="font-family:Helvetica,Arial,sans-serif">
+                                                                                            <td width="60%" align="left" style="padding:10px 0px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(109,109,109)">Payment</td>
+                                                                                            <td width="40%" align="right" style="padding:10px 0px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(109,109,109)">**** **** **** CARD_END</td>
+                                                                                            </tr>
+                                                                                            <tr style="font-family:Helvetica,Arial,sans-serif">
+                                                                                            <td width="60%" align="left" style="padding:10px 0px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(109,109,109)">Subtotal</td>
+                                                                                            <td width="40%" align="right" style="padding:10px 0px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(109,109,109)">PRICE</td>
+                                                                                            </tr>
+                                                                                            <tr style="font-family:Helvetica,Arial,sans-serif">
+                                                                                            <td width="60%" align="left" style="padding:10px 0px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(109,109,109)">Shipping &amp; Handling</td>
+                                                                                            <td width="40%" align="right" style="padding:10px 0px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(109,109,109)">CURRENCY0.00</td>
+                                                                                            </tr>
+                                                                                            <tr style="font-family:Helvetica,Arial,sans-serif">
+                                                                                            <td width="60%" align="left" style="padding:10px 0px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(109,109,109)">Estimated Tax</td>
+                                                                                            <td width="40%" align="right" style="padding:10px 0px;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:rgb(109,109,109)">CURRENCY10.46</td>
+                                                                                            </tr>
+                                                                                            <tr style="font-family:Helvetica,Arial,sans-serif">
+                                                                                            <td width="60%" align="left" style="padding:10px 0px 0px;font-family:Helvetica,Arial,sans-serif;font-size:18px;line-height:30px;color:rgb(17,17,17)">Total</td>
+                                                                                            <td width="40%" align="right" style="padding:10px 0px 0px;font-family:Helvetica,Arial,sans-serif;font-size:18px;line-height:30px;color:rgb(17,17,17)">TOTAL</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td align="center">
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td align="center">
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td align="center">
+                                                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="margin:0px;border-collapse:collapse;padding:0px;background-color:rgb(247,247,247)" role="presentation">
+                                                    <tbody>
+                                                        <tr>
+                                                        <td style="font-size:0px">
+                                                            <table align="center" border="0" cellspacing="0" cellpadding="0" width="94%" style="margin:0px auto;min-width:320px;border-collapse:collapse;padding:0px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td align="left" style="padding:40px 0px 0px 20px;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;line-height:28px;color:rgb(0,0,0)">
+                                                                        Get Help
+                                                                    </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    <td align="left" valign="top" style="font-size:0px;padding:0px 0px 40px;vertical-align:top">
+                                                                        <div style="display:inline-block;max-width:33.33333%;min-width:160px;width:100%;vertical-align:top">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:160px;margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td style="width:100%;min-width:120px;padding:25px 20px 0px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:rgb(17,17,17)"><a href="http://click.official.nike.com/?qs=1d020c5277199bbf4b9151153d3c05bfe48af8ce82835e737980161b3f423983eff92236d50971f324ec44b33c6bd18b08de33bfed58f6e2638e7c61a03ca2ff" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;text-decoration:none;color:rgb(17,17,17)" target="_blank">Cancel Order</a></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div style="display:inline-block;max-width:33.33333%;min-width:160px;width:100%;vertical-align:top">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:160px;margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td style="width:100%;min-width:120px;padding:25px 20px 0px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:rgb(17,17,17)"><a href="http://click.official.nike.com/?qs=1d020c5277199bbf1aa6a1c7cf9ad33e252a7e1befe2e10adc377d7d291b261439e676f1fa59c26da38081d4ca1206b80feb58a2976e27c17a3e5785b5948fb8" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;text-decoration:none;color:rgb(17,17,17)" target="_blank">Return Policy</a></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div style="display:inline-block;max-width:33.33333%;min-width:160px;width:100%;vertical-align:top">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:160px;margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td style="width:100%;min-width:120px;padding:25px 20px 0px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:rgb(17,17,17)"><a href="http://click.official.nike.com/?qs=1d020c5277199bbfa4f273bfbe3a3e661c08ba7ac45804f5c8b7437b17a253b6ec9ead4314ce11bcb4f4abae9226a647dbe3aaa4d2cc445da64f455c239caa48" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;text-decoration:none;color:rgb(17,17,17)" target="_blank">Contact Options</a></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div style="display:inline-block;max-width:33.33333%;min-width:160px;width:100%;vertical-align:top">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:160px;margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td style="width:100%;min-width:120px;padding:25px 20px 0px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:rgb(17,17,17)"><a href="http://click.official.nike.com/?qs=1d020c5277199bbf6c1ada6723d9f8975d0c42f35f1d5129197e4bc584c00b45384adbf21cf4f35739a68f52616fa6b9577c53df4e6e2803b79aacffdaa1ac07" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;text-decoration:none;color:rgb(17,17,17)" target="_blank">Gift Card Balance</a></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div style="display:inline-block;max-width:33.33333%;min-width:160px;width:100%;vertical-align:top">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:160px;margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td style="width:100%;min-width:160px;font-size:0px;line-height:1px"><a href="http://click.official.nike.com/?qs=1d020c5277199bbf6c1ada6723d9f8975d0c42f35f1d5129197e4bc584c00b45384adbf21cf4f35739a68f52616fa6b9577c53df4e6e2803b79aacffdaa1ac07" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;text-decoration:none;color:rgb(17,17,17)" target="_blank"></a></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div style="display:inline-block;max-width:33.33333%;min-width:160px;width:100%;vertical-align:top">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:160px;margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td style="width:100%;min-width:120px;padding:25px 20px 0px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:rgb(17,17,17)"><a href="http://click.official.nike.com/?qs=1d020c5277199bbf6c1ada6723d9f8975d0c42f35f1d5129197e4bc584c00b45384adbf21cf4f35739a68f52616fa6b9577c53df4e6e2803b79aacffdaa1ac07" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;text-decoration:none;color:rgb(17,17,17)" target="_blank"></a></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    <td align="left" valign="top" style="padding:40px 0px 25px;border-top-width:1px;border-top-style:solid;font-size:0px;border-top-color:rgb(229,229,229)">
+                                                                        <div style="display:inline-table;max-width:33.33333%;min-width:160px;width:100%;vertical-align:top">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:160px;margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td align="left" valign="top" width="20" height="23" style="min-width:20px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:22px;padding:0px 0px 0px 20px;color:rgb(0,0,0)"><img width="14" height="23" src="http://image.official.nike.com/lib/fe9815737560077476/m/3/phone-icon2x.png" style="font-family: Helvetica, Arial, sans-serif;"></td>
+                                                                                    <td align="left" valign="top" width="140" height="23" style="min-width:140px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:22px;padding:0px 20px 0px 0px;color:rgb(0,0,0)"><a href="http://click.official.nike.com/?qs=1d020c5277199bbf9f03ad76c279f95adfb2912db484ef0f2a2eb69523fe4aff13dd788e3b829aad9bc22c835392229a1c47319168e6a9964d77df541d82ea3d" style="text-decoration:none;white-space:nowrap;font-family:Helvetica,Arial,sans-serif;color:rgb(0,0,0)" nowrap="" target="_blank">1-800-806-6453</a></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div style="display:inline-table;max-width:33.33333%;min-width:160px;width:100%;vertical-align:top">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" valign="top" style="min-width:160px;margin:0px;border-collapse:collapse;padding:0px" role="presentation">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td valign="top" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:22px;padding:0px 20px;text-decoration:none;color:rgb(17,17,17)">
+                                                                                        <span style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:22px;color:rgb(0,0,0)">4 am - 11 pm PT</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td align="center">
+                                                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="margin:0px;border-collapse:collapse;padding:0px" role="presentation">
+                                                    <tbody>
+                                                        <tr>
+                                                        <td align="center" style="padding:45px 0px 28px;font-family:Helvetica,Arial,sans-serif;font-size:24px;line-height:28px;text-align:center;border-top-width:1px;border-top-style:solid;border-top-color:rgb(229,229,229);color:rgb(0,0,0)">
+                                                            <h1 style="margin:0px;font-family:Helvetica,Arial,sans-serif;font-size:24px;line-height:28px;color:rgb(0,0,0)">
+                                                                <a href="http://click.official.nike.com/?qs=1d020c5277199bbffbd4c13905dbedaf44eccb6b5ceb6b590a4cf8d384c5fb2f461cbcf70868b5296f818569bb0964482152c2ffb20bd092fb5693248bc357f4" style="margin:0px;font-family:Helvetica,Arial,sans-serif;font-size:24px;line-height:28px;text-decoration:none;color:rgb(0,0,0)" target="_blank">
+                                                                <span style="font-size:24px;line-height:28px;font-family:'Nike TG',Helvetica,Arial,sans-serif;color:rgb(0,0,0)">Nike.com</span>
+                                                                </a>
+                                                            </h1>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td align="center" style="font-size:0px;padding:0px 0px 35px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(229,229,229)">
+                                                            <table align="center" border="0" cellspacing="0" cellpadding="0" width="65%" style="min-width:300px;margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td align="center" style="min-width:70px;max-width:25%;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;padding:0px 0px 17px;color:rgb(17,17,17)">
+                                                                        <a href="http://click.official.nike.com/?qs=1d020c5277199bbf045571f1f888259478226d50343ddd2ee7fdadeda009102bb612ef1467ee885d1b4948579f27d49d390cb4b7433fe4c1b44a2f3ab62dfa22" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;text-decoration:none;color:rgb(0,0,0)" target="_blank">Men</a>
+                                                                    </td>
+                                                                    <td style="width:61px;font-size:0px"> </td>
+                                                                    <td align="center" style="min-width:70px;max-width:25%;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;padding:0px 0px 17px;color:rgb(17,17,17)">
+                                                                        <a href="http://click.official.nike.com/?qs=1d020c5277199bbf94c22fc5e64be397262e2417a3da040475dc989ca032ba9c8e8e5a80c6b4c02473eae7b5183af879b2635de0afeaea612bb66fbd6ef852b9" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;text-decoration:none;color:rgb(0,0,0)" target="_blank">Women</a>
+                                                                    </td>
+                                                                    <td style="width:61px;font-size:0px"> </td>
+                                                                    <td align="center" style="min-width:70px;max-width:25%;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;padding:0px 0px 17px;color:rgb(17,17,17)">
+                                                                        <a href="http://click.official.nike.com/?qs=1d020c5277199bbf6714e3f8502d6c5e782b8086ba00d35378047c2d98726946820956c76304c39dc57209a29269b1ebfa5eecc697cec427acfaca264b3e9f86" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;text-decoration:none;color:rgb(0,0,0)" target="_blank">Kids</a>
+                                                                    </td>
+                                                                    <td style="width:61px;font-size:0px"> </td>
+                                                                    <td align="center" style="min-width:70px;max-width:25%;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;padding:0px 0px 17px;color:rgb(17,17,17)">
+                                                                        <a href="http://click.official.nike.com/?qs=1d020c5277199bbf95379e72d502b78ea339716a39fd8762c2aab0ad287faaaf386def16f47368c780de7f8f3bd073794b591a27ee7e32101b77a3f6e22a1701" style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;text-decoration:none;color:rgb(0,0,0)" target="_blank">Customize</a>
+                                                                    </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td align="center">
+                                                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="margin:0px;border-collapse:collapse;padding:0px" role="presentation">
+                                                    <tbody>
+                                                        <tr>
+                                                        <td align="center" style="font-size:0px;padding:20px 0px 40px">
+                                                            <table align="center" border="0" cellspacing="0" cellpadding="0" style="margin:0px auto;border-collapse:collapse;padding:0px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td align="center" style="min-width:70px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:26px;padding:0px;color:rgb(170,170,170)">
+                                                                        <a href="https://nike.com" style="white-space:nowrap;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:26px;text-decoration:none;color:rgb(170,170,170)" target="_blank">Web Version</a>
+                                                                    </td>
+                                                                    <td style="width:17px;min-width:17px;font-size:0px"> </td>
+                                                                    <td align="center" style="min-width:70px;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:26px;padding:0px;color:rgb(170,170,170)">
+                                                                        <a href="http://click.official.nike.com/?qs=1d020c5277199bbf25be27faaeedfc396c05f8eb144ce752ad440cdaf0520ff107aa88178f031a0a9f79b879edb913f0d121a781a319d866831e4d9a0f0dd1e7" style="white-space:nowrap;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:26px;text-decoration:none;color:rgb(170,170,170)" target="_blank">Privacy Policy</a>
+                                                                    </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td align="center" style="font-size:0px;padding:0px 30px">
+                                                            <p style="margin:0px auto;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:26px;padding:0px;color:rgb(170,170,170)">Please <a href="http://click.official.nike.com/?qs=1d020c5277199bbf0d04ace8c21958c8f6229fa9bbe4ceef9fb706cc99efff9b72e09207ff9b4ae26f62236b674096f8ddd45bb427f1e16281ba12f61a1bf894" style="white-space:nowrap;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:26px;color:rgb(170,170,170)" target="_blank">contact us</a> if you have any questions. (If you reply to this email, we won't be able to see it.)</p>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td align="center" style="font-size:0px;padding:43px 20px 0px">
+                                                            <p style="margin:0px auto;font-family:Helvetica,Arial,sans-serif;font-size:11px;line-height:22px;padding:0px;color:rgb(170,170,170)">Â© 2023 Nike, Inc. All Rights Reserved.</p>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td align="center" style="font-size:0px;padding:0px 20px 20px">
+                                                            <p style="margin:0px auto;font-family:Helvetica,Arial,sans-serif;font-size:11px;line-height:22px;padding:0px;color:rgb(170,170,170)"><span class="m_-2774923715066548899address" style="text-decoration:none;font-family:Helvetica,Arial,sans-serif">NIKE, INC. <a href="https://www.google.com/maps/search/One+Bowerman+Drive,+Beaverton,+Oregon+97005,+USA?entry=gmail&amp;source=g" style="font-family:Helvetica,Arial,sans-serif">One Bowerman Drive, Beaverton, Oregon 97005, USA</a>.</span></p>
+                                                        </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="m_-2774923715066548899sidebar" style="font-size:0px;line-height:1px;overflow:hidden!important"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </center>
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + '/jb-server-page?reloadServiceClientId=1');
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' +
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script>
+</body>
+</html>
