@@ -1,6 +1,7 @@
 # Email receipts
 Email receipts from various brands \
-Im not responsible for any misuse
+Im not responsible for any misuse 
+- Templates Folder
 
 ## List of included brands
 - Apple
